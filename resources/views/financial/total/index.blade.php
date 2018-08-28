@@ -375,5 +375,5 @@
     </script>
 @endsection
 @section('style')
-    <link href="/css/treeview.css" rel="stylesheet">
+    <link href="{{url("/")}}/css/treeview.css" rel="stylesheet">
 @endsection
