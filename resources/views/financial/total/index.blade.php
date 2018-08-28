@@ -29,19 +29,19 @@
                     </div>
                     <div class="x_content">
                         <div class="row hidden-print">
-                            <button type="submit" onclick="window.print();" class="btn btn-success col-md-1" ><i class="fa fa-print"></i> چاپ</button>
-                            <button type="submit" class="btn btn-success col-md-1"><i class="fa fa-eye"></i> مشاهده</button>
-                            <button type="submit" class="btn btn-danger col-md-1"><i class="fa fa-trash"></i> حذف</button>
-                            <button type="submit" class="btn btn-success"><i class="fa fa-edit"></i> ویرایش </button>
-                            <a href="#" class="btn btn-success" style="margin-right: 10px" data-toggle="modal" id="m" data-target="#mymodal"><i class="fa fa-plus"></i>  ایجاد حساب کل </a>
-                            <a href="#" class="btn btn-success" style="margin-right: 10px" data-toggle="modal" id="m" data-target="#mymodal2"><i class="fa fa-plus"></i>  ایجاد حساب معین </a>
+                            <button type="submit" id="print" onclick="window.print();" class="btn btn-success col-md-1 customDisable" ><i class="fa fa-print"></i> چاپ</button>
+                            <button type="submit" id="view" class="btn btn-success col-md-1 customDisable"><i class="fa fa-eye"></i> مشاهده</button>
+                            <button type="submit" id="delete" class="btn btn-danger col-md-1 customDisable"><i class="fa fa-trash"></i> حذف</button>
+                            <button type="submit" id="update" class="btn btn-success customDisable"><i class="fa fa-edit"></i> ویرایش </button>
+                            <a href="#" id="total" class="btn btn-success customDisable" style="margin-right: 10px" data-toggle="modal" id="m" data-target="#mymodal"><i class="fa fa-plus"></i>  ایجاد حساب کل </a>
+                            <a href="#" id="limit" class="btn btn-success customDisable" style="margin-right: 10px" data-toggle="modal" id="m" data-target="#mymodal2"><i class="fa fa-plus"></i>  ایجاد حساب معین </a>
                         </div>
                         <br>
                         <h4>گروه حساب ها</h4>
                         <br>
                         <ul id="tree1">
                             @foreach($Group as $category)
-                                <li class="list-group-item" id="{{ $category->Id }}">
+                                <li class="list-group-item" onclick="level1()" id="{{ $category->Id }}">
                                     {{ $category->Code }} - {{ $category->Name }}
                                     <span class="badge pull-left"> {{ count($category->childs) }} </span>
                                     @if(count($category->childs))
@@ -49,6 +49,13 @@
                                     @endif
                                 </li>
                             @endforeach
+                            <script>
+                                function level1() {
+                                    $(".customDisable").hide();
+                                    $("#total").show();
+                                    $("#print").show();
+                                }
+                            </script>
                         </ul>
                     </div>
                 </div>
