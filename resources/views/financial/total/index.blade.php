@@ -2,7 +2,7 @@
 @section('content')
 <div class="right_col" role="main">
     @include('layout.applications')
-    <div class="">
+    <div class="" >
         <div class="page-title hidden-print">
             <div class="title_left">
                 <h3>درخت حساب های معین و کل</h3>
@@ -39,7 +39,7 @@
                         <br>
                         <h4>گروه حساب ها</h4>
                         <br>
-                        <ul id="tree1">
+                        <ul id="tree1" >
                             @foreach($Group as $category)
                                 <li class="list-group-item" onclick="level1()" id="{{ $category->Id }}">
                                     {{ $category->Code }} - {{ $category->Name }}
@@ -50,6 +50,11 @@
                                 </li>
                             @endforeach
                             <script>
+                                function hideAll() {
+                                    $(".customDisable").hide();
+                                }
+
+
                                 function level1() {
                                     $(".customDisable").hide();
                                     $("#total").show();

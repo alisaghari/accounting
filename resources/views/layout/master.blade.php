@@ -28,7 +28,7 @@
     @yield('style')
 </head>
 <!-- /header content -->
-<body class="nav-md">
+<body class="nav-md" onload="hideAll()">
 <div class="container body">
     <div class="main_container">
         @include('layout.LeftMenu')
