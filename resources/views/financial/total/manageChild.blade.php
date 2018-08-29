@@ -10,11 +10,10 @@
         </li>
     @endforeach
 </ul>
-
 <script>
     function level2() {
         $(".customDisable").hide();
-        $("#limit").show();
+        $("#h").show();
         $("#update").show();
         $("#delete").show();
         $("#View").show();

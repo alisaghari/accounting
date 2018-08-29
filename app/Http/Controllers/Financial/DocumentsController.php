@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Financial;
 use App\Model\Financial\Documents;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class DocumentsController extends Controller
 {
@@ -15,7 +16,8 @@ class DocumentsController extends Controller
      */
     public function index()
     {
-        return view('financial.document.documents');
+        $Documents = Documents::all();
+        return view('financial.document.documents', compact('Documents'));
     }
 
     /**
