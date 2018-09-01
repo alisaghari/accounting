@@ -16,7 +16,7 @@ class DocumentsController extends Controller
      */
     public function index()
     {
-        $Documents = Documents::all();
+        $Documents = DB::table('financial_documents')->paginate(1);
         return view('financial.document.documents', compact('Documents'));
     }
 

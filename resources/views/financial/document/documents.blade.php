@@ -7,13 +7,12 @@
                 <div class="title_left">
                     <h3>مشاهده اسناد</h3>
                 </div>
-
                 <div class="title_right">
                     <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="جست و جو برای...">
                             <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">برو!</button>
+                        <button class="btn btn-default" type="button">برو!</button>
                     </span>
                         </div>
                     </div>
@@ -208,7 +207,7 @@
                                                     </td>
                                                     <td width="80px">
                                                         <a href="#" class="btn btn-danger" title="حذف"><i class="fa fa-trash"></i>  </a>
-                                                        <a href="#" class="btn btn-info" title="ویرایش" title="ایجاد"  data-toggle="modal" data-target="#mymodal"><i class="fa fa-edit"></i>  </a>
+                                                        <a href="#" class="btn btn-info" title="ایجاد"  data-toggle="modal" data-target="#mymodal"><i class="fa fa-edit"></i>  </a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -355,8 +354,7 @@
                                                     <div class="col-md-1 "> <button type="submit" class="btn btn-success hidden-print" style="margin-left: 15px"><i class="fa fa-check"></i>  تایید </button></div>
                                                 </div>
                                                 <hr>
-                                                <div >
-                                                    <div class="row">
+                                                <div class="row">
                                                         <ul style="list-style-type: none;" class="col-md-12">
                                                             <li  style="float: right ; margin-right: 10px" >عطف: <label>123</label></li>
                                                             <li  style="float: right; margin-right: 20px">تاریخ <label>5424</label></li>
@@ -370,63 +368,90 @@
                                                         </ul>
                                                         <div class="clearfix"></div>
                                                     </div>
-                                                </div>
-                                                <fieldset>
-                                                    <legend> </legend>
                                                     <div class="row">
                                                         <div class="table-responsive">
                                                             <table class="table table-hover">
-                                                                <tr style=" border-bottom: #0b97c4 solid 3px; background-color: #55efc4" >
-                                                                    <th style="width: 20px;"> رج </th>
-                                                                    <th style="width: 100px;"> معین</th>
-                                                                    <th style="width: 100px;"> تفصیل1</th>
-                                                                    <th style="width: 100px;"> تفصیل 2</th>
-                                                                    <th style="width: 100px;">تفصیل 3</th>
-                                                                    <th style="width: 100px;"> شرح</th>
-                                                                    <th style="width: 100px;">بدهکار </th>
-                                                                    <th style="width: 100px;">بستانکار </th>
-                                                                    <th style="width: 100px;"> پیوست</th>
-                                                                    <th style="width: 100px;">شماره</th>
-                                                                    <th style="width: 100px;"> تاریخ</th>
-                                                                    <th style="width: 150px;"> عملیات</th>
+                                                                <tr style=" border-bottom: #0b97c4 solid 3px; background-color: #55efc4;" >
+                                                                    <th style="width: 20px; text-align: center"> رج </th>
+                                                                    <th style="width: 150px; text-align: center"> معین</th>
+                                                                    <th style="width: 100px; text-align: center"> تفضیل 1</th>
+                                                                    <th style="width: 100px; text-align: center"> تفضیل 2</th>
+                                                                    <th style="width: 100px; text-align: center">تفضیل 3</th>
+                                                                    <th style="width: 150px; text-align: center"> شرح</th>
+                                                                    <th style="width: 150px; text-align: center">بدهکار </th>
+                                                                    <th style="width: 150px; text-align: center">بستانکار </th>
+                                                                    <th style="width: 100px; text-align: center"> پیوست</th>
+                                                                    <th style="width: 100px; text-align: center">شماره</th>
+                                                                    <th style="width: 100px; text-align: center"> تاریخ</th>
+                                                                    <th colspan="2" style="text-align: center"> عملیات</th>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
                                                                         1
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Helper" placeholder="معین">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px" name="Helper" placeholder="معین">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default" data-toggle="modal" data-target="#helper"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedOne" placeholder="تفضیلی یک">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedOne" placeholder="تفضیلی یک">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedTwo" placeholder="تفضیلی دو">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedTwo" placeholder="تفضیلی دو">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedTree" placeholder="تفضیلی سه">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" name="DetailedTree" style="width: 100px;" placeholder="تفضیلی سه">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="Description" placeholder="شرح">
+                                                                        <input class="form-control" type="text" name="Description" style="width: 150px;" placeholder="شرح">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Debtor" placeholder="بدهکار">
+                                                                        <input class="form-control" style="width: 150px;" type="number" name="Debtor" placeholder="بدهکار">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Creditor" placeholder="بستانکار">
+                                                                        <input class="form-control" style="width: 150px;" type="number" name="Creditor" placeholder="بستانکار">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="Attach" placeholder="پیوست">
+                                                                        <input class="form-control" style="width: 100px;" type="text" name="Attach" placeholder="پیوست">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Number" placeholder="شماره">
+                                                                        <input class="form-control" style="width: 100px;" type="number" name="Number" placeholder="شماره">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="DocumentsDate" placeholder="تاریخ">
+                                                                        <input class="form-control" style="width: 100px;" type="text" name="DocumentsDate" placeholder="تاریخ">
                                                                     </td>
                                                                     <td>
-                                                                        <a href="#" class="btn btn-danger" title="حذف" ><i class="fa fa-trash"></i>  </a>
-                                                                        <a href="#" class="btn btn-info" title="ویرایش" data-toggle="modal" data-target="#mymodal"><i class="fa fa-edit"></i>  </a>
+                                                                        <a href="#" class="btn btn-danger" title="حذف" style="display: inline-block" ><i class="fa fa-trash"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="#" class="btn btn-info" title="تایید" style="display: inline-block" data-toggle="modal" data-target="#s"><i class="fa fa-check"></i></a>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -434,44 +459,73 @@
                                                                         1
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Helper" placeholder="معین">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px" name="Helper" placeholder="معین">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedOne" placeholder="تفضیلی یک">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedOne" placeholder="تفضیلی یک">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedTwo" placeholder="تفضیلی دو">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedTwo" placeholder="تفضیلی دو">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="DetailedTree" placeholder="تفضیلی سه">
+                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
+                                                                            <div class="input-group">
+                                                                                <input class="form-control" type="number" name="DetailedTree" style="width: 100px;" placeholder="تفضیلی سه">
+                                                                                <span class="input-group-btn">
+                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="Description" placeholder="شرح">
+                                                                        <input class="form-control" type="text" name="Description" style="width: 150px;" placeholder="شرح">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Debtor" placeholder="بدهکار">
+                                                                        <input class="form-control" style="width: 150px;" type="number" name="Debtor" placeholder="بدهکار">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Creditor" placeholder="بستانکار">
+                                                                        <input class="form-control" style="width: 150px;" type="number" name="Creditor" placeholder="بستانکار">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="Attach" placeholder="پیوست">
+                                                                        <input class="form-control" style="width: 100px;" type="text" name="Attach" placeholder="پیوست">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="number" name="Number" placeholder="شماره">
+                                                                        <input class="form-control" style="width: 100px;" type="number" name="Number" placeholder="شماره">
                                                                     </td>
                                                                     <td>
-                                                                        <input class="form-control" type="text" name="DocumentsDate" placeholder="تاریخ">
+                                                                        <input class="form-control" style="width: 100px;" type="text" name="DocumentsDate" placeholder="تاریخ">
                                                                     </td>
                                                                     <td>
-                                                                        <a href="#" class="btn btn-danger" title="حذف" ><i class="fa fa-trash"></i>  </a>
-                                                                        <a href="#" class="btn btn-info" title="ویرایش" data-toggle="modal" data-target="#mymodal"><i class="fa fa-edit"></i>  </a>
+                                                                        <a href="#" class="btn btn-danger" title="حذف" style="display: inline-block" ><i class="fa fa-trash"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <a href="#" class="btn btn-info" title="تایید" style="display: inline-block" data-toggle="modal" data-target="#mymodal"><i class="fa fa-check"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
                                                         </div>
                                                     </div>
-                                                </fieldset>
                                                 <fieldset>
                                                     <legend> </legend>
                                                     <div class="row" >
@@ -512,6 +566,190 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tree" tabindex="-1" role="dialog" aria-labelledby="tree" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h6>ایجاد حساب معین</h6>
+                    <form id="demo-form3" method="post" action="{{ route('add.helper') }}" data-parsley-validate class="form-horizontal form-label-left">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="ParentId" id="Id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Code">کد حساب
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <input type="text" id="Code" name="Code" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Name">شرح حساب
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-6 col-xs-12">
+                                <input type="text" id="Name" name="Name" class="form-control col-md-8 col-xs-12">
+                            </div>
+                        </div>
+                        <hr>
+                        <div >
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <td width="100px">تفضیلی اول:</td>
+                                            <td width="100px">
+                                                گروه تفضیلی
+                                            </td>
+                                            <td width="400px">
+                                                <input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedOne" id="One" />
+                                            </td>
+                                            <td width="80px">
+                                                <a class="btn btn-primary" id="DetailedOne" name="One" style="padding-top:2mm;"  data-toggle="modal" data-target="#mymodal3"><i class="fa fa-plus"></i> </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>تفضیلی دوم:</td>
+                                            <td>گروه تفضیلی</td>
+                                            <td> <input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedTwo" id="Two" /></td>
+                                            <td>
+                                                <a class="btn btn-primary" id="DetailedTwo" name="Two" style="padding-top:2mm;" data-toggle="modal" data-target="#mymodal3"><i class="fa fa-plus" ></i> </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>تفضیلی سوم:</td>
+                                            <td> گروه تفضیلی</td>
+                                            <td><input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedTree" id="Tree" /></td>
+                                            <td>
+                                                <a class="btn btn-primary" id="DetailedTree" name="Tree" data-toggle="modal" data-target="#mymodal3" style="padding-top:2mm;"><i class="fa fa-plus"></i> </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend> </legend>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div id="gender" class="btn-group" data-toggle="buttons">
+                                                    <span >
+                                                        سررسید دار است
+                                                        <input  type="checkbox" class="flat" value="1" name="Arrived"/>
+                                                    </span>
+                                            <span style="margin-right: 10px">پیگیری دارد
+                                                        <input type="checkbox" class="flat" value="1" name="Follow"/>
+                                                    </span>
+                                        </div>
+                                        <input type="hidden" name="Type" value="2">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button class="btn btn-success" id="h" type="submit">ثبت</button>
+                                <button type="submit" class="btn btn-primary" data-dismiss="modal" >انصراف</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="helper" tabindex="-1" role="dialog" aria-labelledby="helper" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h6>ایجاد حساب معین</h6>
+                    <form id="demo-form3" method="post" action="{{ route('add.helper') }}" data-parsley-validate class="form-horizontal form-label-left">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="ParentId" id="Id" value="">
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Code">کد حساب
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <input type="text" id="Code" name="Code" class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Name">شرح حساب
+                                <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-6 col-xs-12">
+                                <input type="text" id="Name" name="Name" class="form-control col-md-8 col-xs-12">
+                            </div>
+                        </div>
+                        <hr>
+                        <div >
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <tr>
+                                            <td width="100px">تفضیلی اول:</td>
+                                            <td width="100px">
+                                                گروه تفضیلی
+                                            </td>
+                                            <td width="400px">
+                                                <input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedOne" id="One" />
+                                            </td>
+                                            <td width="80px">
+                                                <a class="btn btn-primary" id="DetailedOne" name="One" style="padding-top:2mm;"  data-toggle="modal" data-target="#mymodal3"><i class="fa fa-plus"></i> </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>تفضیلی دوم:</td>
+                                            <td>گروه تفضیلی</td>
+                                            <td> <input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedTwo" id="Two" /></td>
+                                            <td>
+                                                <a class="btn btn-primary" id="DetailedTwo" name="Two" style="padding-top:2mm;" data-toggle="modal" data-target="#mymodal3"><i class="fa fa-plus" ></i> </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>تفضیلی سوم:</td>
+                                            <td> گروه تفضیلی</td>
+                                            <td><input class="form-control col-md-8 col-xs-12 flat" type="text" placeholder="گروه تفضیلی" name="DetailedTree" id="Tree" /></td>
+                                            <td>
+                                                <a class="btn btn-primary" id="DetailedTree" name="Tree" data-toggle="modal" data-target="#mymodal3" style="padding-top:2mm;"><i class="fa fa-plus"></i> </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <fieldset>
+                            <legend> </legend>
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div id="gender" class="btn-group" data-toggle="buttons">
+                                                    <span >
+                                                        سررسید دار است
+                                                        <input  type="checkbox" class="flat" value="1" name="Arrived"/>
+                                                    </span>
+                                            <span style="margin-right: 10px">پیگیری دارد
+                                                        <input type="checkbox" class="flat" value="1" name="Follow"/>
+                                                    </span>
+                                        </div>
+                                        <input type="hidden" name="Type" value="2">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="ln_solid"></div>
+                        <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                <button class="btn btn-success" id="h" type="submit">ثبت</button>
+                                <button type="submit" class="btn btn-primary" data-dismiss="modal" >انصراف</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
