@@ -23,14 +23,14 @@
                 <ul class="nav side-menu">
                     <li><a><i class="fa fa-home"></i> حسابها <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/financial/"> حساب های معین و کل </a></li>
-                            <li><a href="/financial/detailed">حساب های تضیلی </a></li>
+                            <li><a href="{{url("/")}}/financial/"> حساب های معین و کل </a></li>
+                            <li><a href="{{url("/")}}/financial/detailed">حساب های تضیلی </a></li>
                             <li><a href="index3.html">مجموعه ها</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-clone"></i> اسناد <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="/financial/documents">مشاهده</a></li>
+                            <li><a href="{{url("/")}}/financial/documents">مشاهده</a></li>
                             <li><a href="form_advanced.html">فهرست اسناد</a></li>
                             <li><a href="form_validation.html">چاپ اسناد</a></li>
                             <li><a href="form_wizards.html">ردیف اسناد</a></li>
