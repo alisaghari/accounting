@@ -207,7 +207,7 @@
     <!--end light box-->
 @endsection
 @section('script')
-    <script src="/js/treeview.js"></script>
+    <script src="{{url("/")}}/js/treeview.js"></script>
     <script>
         $("#tree1 li").on('click', function(e) {
             let Id = '';
@@ -229,5 +229,5 @@
     </script>
 @endsection
 @section('style')
-    <link href="/css/treeview.css" rel="stylesheet">
+    <link href="{{url("/")}}/css/treeview.css" rel="stylesheet">
 @endsection
