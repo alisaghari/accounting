@@ -51,9 +51,9 @@
                             @endforeach
                             <script>
                                 function level1() {
-                                    $(".customDisable").hide();
-                                    $("#m").show();
-                                    $("#print").show();
+                                    $(".customDisable").fadeOut(0);
+                                    $("#m").fadeIn();
+                                    $("#print").fadeIn();
                                 }
                             </script>
                         </ul>

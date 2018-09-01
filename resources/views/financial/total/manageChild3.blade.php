@@ -9,10 +9,10 @@
 
 <script>
     function level3() {
-        $(".customDisable").hide();
-        $("#update").show();
-        $("#delete").show();
-        $("#View").show();
-        $("#print").show();
+        $(".customDisable").fadeOut(0);
+        $("#update").fadeIn();
+        $("#delete").fadeIn();
+        $("#View").fadeIn();
+        $("#print").fadeIn();
     }
 </script>

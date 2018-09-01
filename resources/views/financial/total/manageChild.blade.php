@@ -12,11 +12,11 @@
 </ul>
 <script>
     function level2() {
-        $(".customDisable").hide();
-        $("#h").show();
-        $("#update").show();
-        $("#delete").show();
-        $("#View").show();
-        $("#print").show();
+        $(".customDisable").fadeOut(0);
+        $("#m").fadeIn();
+        $("#update").fadeIn();
+        $("#delete").fadeIn();
+        $("#View").fadeIn();
+        $("#print").fadeIn();
     }
 </script>
