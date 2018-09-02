@@ -23,6 +23,7 @@ Route::namespace('Financial')->prefix('financial')->group(function (){
     $this->get('detailed-tree-view',['uses'=>'DetailedController@manageDetailed']);
     $this->post('add-detailed',['as'=>'add.detailed','uses'=>'DetailedController@addDetailed']);// ثبت حساب های تفضیلی جدید
     $this->resource('/documents', 'DocumentsController');// روت اسناد مالی
+    $this->get('/documents', 'DocumentsController@Group');//روت درخت لایت باکس معین در صفحه ایجاد اسناد
 });
 Route::get('/', function (){
     return view('welcome');
