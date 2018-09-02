@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Financial;
 use App\Model\Financial\Group;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class GroupAccentingController extends Controller
 {
@@ -31,35 +32,36 @@ class GroupAccentingController extends Controller
         $input = $request->all();
         Group::create($input);
         return back()->with('با موفقیت افزوده شد');
-    }/**
-     * Show the application dashboard.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    }
+
+    public function updateGroup(Request $request)
+    {
+        DB::table('financial_accounts')
+            ->where('Id', $request->input("ThisId"))
+            ->update(['Code' => $request->input("Code"),
+                'Name' => $request->input("Name"),
+                'TheNatureOfTheAccountBalance' => $request->input("TheNatureOfTheAccountBalance"),
+                'CostFactor' => $request->input("CostFactor")]);
+
+
+        return back();
+    }
+
     public function addHelper(Request $request)
     {
         $input = $request->all();
         Group::create($input);
         return back()->with('با موفقیت افزوده شد');
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //

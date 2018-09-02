@@ -32,7 +32,8 @@
                             <button type="submit" id="print" onclick="window.print();" style="display: none" class="btn btn-success col-md-1 customDisable" ><i class="fa fa-print"></i> چاپ</button>
                             <button type="submit" id="view" class="btn btn-success col-md-1 customDisable" style="display: none"><i class="fa fa-eye"></i> مشاهده</button>
                             <button type="submit" id="delete" class="btn btn-danger col-md-1 customDisable" style="display: none"><i class="fa fa-trash"></i> حذف</button>
-                            <button type="submit" id="update" class="btn btn-success customDisable" style="display: none"><i class="fa fa-edit"></i> ویرایش </button>
+                            <button type="submit" id="update" class="btn btn-success customDisable" style="display: none "  data-toggle="modal" id="m" data-target="#edithelper"><i class="fa fa-edit"></i> ویرایش معین </button>
+                            <button type="submit" id="updatetotal" class="btn btn-success customDisable" style="display: none" data-toggle="modal" id="m" data-target="#edittotal"><i class="fa fa-edit"></i> ویرایش کل </button>
                             <a href="#" class="btn btn-success customDisable" style="margin-right: 10px ; display: none" data-toggle="modal" id="m" data-target="#mymodal"><i class="fa fa-plus"></i>  ایجاد حساب کل </a>
                             <a href="#" class="btn btn-success customDisable" style="margin-right: 10px; display: none" data-toggle="modal" id="h" data-target="#mymodal2"><i class="fa fa-plus"></i>  ایجاد حساب معین </a>
                         </div>
@@ -41,7 +42,7 @@
                         <br>
                         <ul id="tree1" >
                             @foreach($Group as $category)
-                                <li class="list-group-item" onclick="level1()" id="{{ $category->Id }}">
+                                <li class="list-group-item activeThis" onclick="level1()" id="{{ $category->Id }}">
                                     {{ $category->Code }} - {{ $category->Name }}
                                     <span class="badge pull-left"> {{ count($category->childs) }} </span>
                                     @if(count($category->childs))
@@ -49,7 +50,12 @@
                                     @endif
                                 </li>
                             @endforeach
+                                <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
                             <script>
+                                $(".activeThis").click(function() {
+                                    $(".activeThis").css("background-color", "white")
+                                    $( this ).css("background-color", "greenyellow");
+                                });
                                 function level1() {
                                     $(".customDisable").fadeOut(0);
                                     $("#m").fadeIn();
@@ -324,6 +330,135 @@
                         <button type="submit" id="save_value" class="btn btn-success" data-dismiss="modal">ثبت</button>
                         <button type="submit" class="btn btn-primary" data-dismiss="modal">انصراف</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="edithelper" tabindex="-1" role="dialog" aria-labelledby="edithelper" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <div>
+                        <button type="submit" id="save_value" class="btn btn-success" >ثبت</button>
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">انصراف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end light box-->
+<div class="modal fade" id="edittotal" tabindex="-1" role="dialog" aria-labelledby="edittotal" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="width: 80%; height: 30%" >
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="" role="main">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h2> ایجاد حساب کل جدید</h2>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="x_content">
+                                        <br/>
+                                        <form id="demo-form2" method="post" action="{{ route('update.group') }}" data-parsley-validate class="form-horizontal form-label-left">
+                                            {{ csrf_field() }}
+                                            <input type="hidden" name="ThisId" id="ThisId" value="">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Code">کد حساب
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                                    <input type="text" id="Code" name="Code" required="required"
+                                                           class="form-control col-md-7 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Name">شرح حساب
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-md-8 col-sm-6 col-xs-12">
+                                                    <input type="text" id="Name" name="Name" required="required"
+                                                           class="form-control col-md-8 col-xs-12">
+                                                </div>
+                                            </div>
+                                            <fieldset class="form-group">
+                                                <legend>ماهیت مانده حساب</legend>
+                                                <div >
+                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                        <span style="margin-left: 10px">
+                                                            بدون کنترل:
+                                                            <input  type="radio" class="flat " name="TheNatureOfTheAccountBalance" id="genderM" value="1" checked=""
+                                                                    required/>
+                                                        </span>
+                                                        <span style=" margin-left: 10px">
+                                                            بدهکار:
+                                                            <input type="radio" class="flat" name="TheNatureOfTheAccountBalance" id="genderF" value="2"/>
+                                                        </span>
+                                                        <span style="margin-left: 10px">
+                                                            بستانکار:
+                                                            <input type="radio" class="flat" name="TheNatureOfTheAccountBalance" id="genderM" value="3" checked=""
+                                                                   required/>
+                                                        </span>
+                                                        <span style=" margin-left: 10px">
+                                                            اکیدا بدهکار:
+                                                            <input type="radio" class="flat" name="TheNatureOfTheAccountBalance" id="genderM" value="4" checked=""
+                                                                   required/>
+                                                        </span>
+                                                        <span style=" margin-left: 10px">اکیدا بستانکار:
+                                                            <input type="radio" class="flat" name="TheNatureOfTheAccountBalance" id="genderF" value="5"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </fieldset></br>
+                                            <fieldset>
+                                                <legend>عامل هزینه</legend>
+
+                                                <div class="form-group">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <span >
+                                                        مواد:
+                                                        <input  type="radio" class="flat"  name="CostFactor" id="genderM" value="1" checked=""
+                                                                required/>
+                                                    </span>
+                                                        <span style="margin-right: 10px">دستمزد:
+                                                        <input type="radio" class="flat"  name="CostFactor" id="genderF" value="2"/>
+                                                    </span>
+                                                        <span style="margin-right: 10px">
+                                                        سربار:
+                                                        <input type="radio" class="flat" name="CostFactor" id="genderM" value="3" checked=""
+                                                               required/>
+                                                    </span>
+                                                        <span style="margin-right: 10px">
+                                                        سایر:
+                                                        <input type="radio" class="flat" name="CostFactor" id="genderM" value="4" checked=""
+                                                               required/>
+                                                    </span>
+                                                    </div>
+                                                    <input type="hidden" name="Type" value="1">
+                                                </div>
+                                            </fieldset>
+                                            <div class="ln_solid"></div>
+                                            <div class="form-group">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                                    <button type="submit" class="btn btn-success">ثبت</button>
+                                                    <button type="submit" class="btn btn-primary" data-dismiss="modal">انصراف</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>

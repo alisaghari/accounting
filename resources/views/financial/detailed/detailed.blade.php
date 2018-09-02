@@ -204,6 +204,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+
     <!--end light box-->
 @endsection
 @section('script')
