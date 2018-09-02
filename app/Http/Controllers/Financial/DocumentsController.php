@@ -6,6 +6,7 @@ use App\Model\Financial\Documents;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Model\Financial\Group;
 
 class DocumentsController extends Controller
 {
@@ -19,7 +20,12 @@ class DocumentsController extends Controller
         $Documents = DB::table('financial_documents')->paginate(1);
         return view('financial.document.documents', compact('Documents'));
     }
-
+    public function Group()
+    {
+        $Group = Group::where('ParentId', '=', 0)->get();
+        $AllGroup = Group::pluck('Name', 'Id')->all();
+        return view('financial.document.documents', compact('Group', 'AllGroup'));
+    }
     /**
      * Show the form for creating a new resource.
      *
