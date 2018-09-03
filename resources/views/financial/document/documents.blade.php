@@ -892,7 +892,6 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection
 @section('script')
     <script src="{{ url('/') }}/js/treeview.js"></script>
