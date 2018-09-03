@@ -1,6 +1,6 @@
 <ul>
         @foreach($childs as $child)
-                <li class="list-group-item activeThis" onclick="level3()" id="{{ $child->Id }}">
+                <li class="list-group-item activeThis" Code="{{ $child->Code }}" onclick="level3()" id="{{ $child->Id }}">
                         {{ $child->Code }} - {{ $child->Name }}
                         <span class="badge pull-left"> {{ count($child->childs) }} </span>
                 </li>

@@ -1,5 +1,4 @@
 <ul>
-
     @foreach($childs as $child)
         <li class="list-group-item activeThis" onclick="level2({{$child->Id}})" id="{{ $child->Id }}">
             {{ $child->Code }} - {{ $child->Name }}
@@ -18,9 +17,6 @@
         $("#delete").fadeIn();
         $("#View").fadeIn();
         $("#print").fadeIn();
-
         $("#ThisId").val(id);
     }
-
-
 </script>

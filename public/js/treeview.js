@@ -52,3 +52,4 @@ $.fn.extend({
 });
 /* Initialization of treeviews */
 $('#tree1').treed();
+$('#tree2').treed();

@@ -340,7 +340,7 @@
                                         </div>
                                         <div class="x_content">
                                             <br/>
-                                            <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                            <form data-parsley-validate class="form-horizontal form-label-left">
                                                 <div class="row">
                                                     <div class="col-md-1 "> <button type="submit" class="btn btn-success hidden-print" ><i class="fa fa-refresh"></i> بازسازی</button></div>
                                                     <div class="col-md-1 "> <button type="submit" class="btn btn-success hidden-print" style="margin-right: 12px"><i class="fa fa-plus-square "></i>مجموع</button></div>
@@ -355,19 +355,19 @@
                                                 </div>
                                                 <hr>
                                                 <div class="row">
-                                                        <ul style="list-style-type: none;" class="col-md-12">
-                                                            <li  style="float: right ; margin-right: 10px" >عطف: <label>123</label></li>
-                                                            <li  style="float: right; margin-right: 20px">تاریخ <label>5424</label></li>
-                                                            <li  style="float: right; margin-right: 30px">تعداد پیوست<label>668565</label></li>
-                                                            <li  style="float: right ; margin-right: 40px" >شرح پیوست <label>123</label></li>
-                                                        </ul>
-                                                        <ul style="list-style-type: none;" class="col-md-12">
-                                                            <li  style="float: right ; margin-left: 60px ;margin-top: 30px">شماره: <label>123</label></li>
-                                                            <li  style="float: right; margin-left: 30px;margin-top: 30px">شعبه: <label>5424</label></li>
-                                                            <li  style="float: right; margin-left: 30px;margin-top: 30px">موضوع:<label>668565</label></li>
-                                                        </ul>
-                                                        <div class="clearfix"></div>
-                                                    </div>
+                                                    <ul style="list-style-type: none;" class="col-md-12">
+                                                        <li  style="float: right ; margin-right: 10px" >عطف: <label>123</label></li>
+                                                        <li  style="float: right; margin-right: 20px">تاریخ <label>5424</label></li>
+                                                        <li  style="float: right; margin-right: 30px">تعداد پیوست<label>668565</label></li>
+                                                        <li  style="float: right ; margin-right: 40px" >شرح پیوست <label>123</label></li>
+                                                    </ul>
+                                                    <ul style="list-style-type: none;" class="col-md-12">
+                                                        <li  style="float: right ; margin-left: 60px ;margin-top: 30px">شماره: <label>123</label></li>
+                                                        <li  style="float: right; margin-left: 30px;margin-top: 30px">شعبه: <label>5424</label></li>
+                                                        <li  style="float: right; margin-left: 30px;margin-top: 30px">موضوع:<label>668565</label></li>
+                                                    </ul>
+                                                    <div class="clearfix"></div>
+                                                </div>
                                                     <div class="row">
                                                         <div class="table-responsive">
                                                             <table class="table table-hover">
@@ -392,7 +392,7 @@
                                                                     <td>
                                                                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
                                                                             <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px" name="Helper" placeholder="معین">
+                                                                                <input class="form-control" type="number" id="Code" style="width: 100px" name="Helper" placeholder="معین">
                                                                                 <span class="input-group-btn">
                                                                                     <a class="btn btn-default" data-toggle="modal" data-target="#tree"><i class="fa fa-arrow-down"></i> </a>
                                                                                 </span>
@@ -402,9 +402,9 @@
                                                                     <td>
                                                                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
                                                                             <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedOne" placeholder="تفضیلی یک">
+                                                                                <input class="form-control" type="number" id="DetailedOne" style="width: 100px;" name="DetailedOne" placeholder="تفضیلی یک">
                                                                                 <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                    <a class="btn btn-default click" name="DetailedOne" data-toggle="modal" data-target="#selectDetailed"><i class="fa fa-arrow-down"></i> </a>
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -412,9 +412,9 @@
                                                                     <td>
                                                                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
                                                                             <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedTwo" placeholder="تفضیلی دو">
+                                                                                <input class="form-control" type="number" id="DetailedTwo" style="width: 100px;" name="DetailedTwo" placeholder="تفضیلی دو">
                                                                                 <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                    <a class="btn btn-default click" name="DetailedTwo" data-toggle="modal" data-target="#selectDetailed"><i class="fa fa-arrow-down"></i> </a>
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -422,9 +422,9 @@
                                                                     <td>
                                                                         <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
                                                                             <div class="input-group">
-                                                                                <input class="form-control" type="number" name="DetailedTree" style="width: 100px;" placeholder="تفضیلی سه">
+                                                                                <input class="form-control" type="number" id="DetailedTree" name="DetailedTree" style="width: 100px;" placeholder="تفضیلی سه">
                                                                                 <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
+                                                                                    <a class="btn btn-default click" name="DetailedTree" data-toggle="modal" data-target="#selectDetailed"><i class="fa fa-arrow-down"></i> </a>
                                                                                 </span>
                                                                             </div>
                                                                         </div>
@@ -452,75 +452,6 @@
                                                                     </td>
                                                                     <td>
                                                                         <a href="#" class="btn btn-info" title="تایید" style="display: inline-block" data-toggle="modal" data-target="#s"><i class="fa fa-check"></i></a>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        1
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
-                                                                            <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px" name="Helper" placeholder="معین">
-                                                                                <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
-                                                                            <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedOne" placeholder="تفضیلی یک">
-                                                                                <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
-                                                                            <div class="input-group">
-                                                                                <input class="form-control" type="number" style="width: 100px;" name="DetailedTwo" placeholder="تفضیلی دو">
-                                                                                <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right">
-                                                                            <div class="input-group">
-                                                                                <input class="form-control" type="number" name="DetailedTree" style="width: 100px;" placeholder="تفضیلی سه">
-                                                                                <span class="input-group-btn">
-                                                                                    <a class="btn btn-default"><i class="fa fa-arrow-down"></i> </a>
-                                                                                </span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" type="text" name="Description" style="width: 150px;" placeholder="شرح">
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" style="width: 150px;" type="number" name="Debtor" placeholder="بدهکار">
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" style="width: 150px;" type="number" name="Creditor" placeholder="بستانکار">
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" style="width: 100px;" type="text" name="Attach" placeholder="پیوست">
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" style="width: 100px;" type="number" name="Number" placeholder="شماره">
-                                                                    </td>
-                                                                    <td>
-                                                                        <input class="form-control" style="width: 100px;" type="text" name="DocumentsDate" placeholder="تاریخ">
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#" class="btn btn-danger" title="حذف" style="display: inline-block" ><i class="fa fa-trash"></i></a>
-                                                                    </td>
-                                                                    <td>
-                                                                        <a href="#" class="btn btn-info" title="تایید" style="display: inline-block" data-toggle="modal" data-target="#mymodal"><i class="fa fa-check"></i></a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -589,13 +520,14 @@
                                         <button type="submit" id="update" class="btn btn-success customDisable" style="display: none"><i class="fa fa-edit"></i> ویرایش </button>
                                         <a href="#" class="btn btn-success customDisable" style="margin-right: 10px ; display: none" data-toggle="modal" id="m" data-target="#selectTotal"><i class="fa fa-plus"></i>  ایجاد حساب کل </a>
                                         <a href="#" class="btn btn-success customDisable" style="margin-right: 10px; display: none" data-toggle="modal" id="h" data-target="#selectHelper"><i class="fa fa-plus"></i>  ایجاد حساب معین </a>
+                                        <button id="SelectCode" class="btn btn-primary" data-dismiss="modal">انتخاب</button>
                                     </div>
                                     <br>
                                     <h4>گروه حساب ها</h4>
                                     <br>
                                     <ul id="tree1" >
                                         @foreach($Group as $category)
-                                            <li class="list-group-item" onclick="level1()" id="{{ $category->Id }}">
+                                            <li class="list-group-item activeThis" onclick="level1()" id="{{ $category->Id }}">
                                                 {{ $category->Code }} - {{ $category->Name }}
                                                 <span class="badge pull-left"> {{ count($category->childs) }} </span>
                                                 @if(count($category->childs))
@@ -603,7 +535,12 @@
                                                 @endif
                                             </li>
                                         @endforeach
+                                        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
                                         <script>
+                                            $(".activeThis").click(function() {
+                                                $(".activeThis").css("background-color", "white")
+                                                $( this ).css("background-color", "greenyellow");
+                                            });
                                             function level1() {
                                                 $(".customDisable").fadeOut(0);
                                                 $("#m").fadeIn();
@@ -916,65 +853,46 @@
         </div>
     </div>
     <div class="modal fade" id="selectDetailed" tabindex="-1" role="dialog" aria-labelledby="selectDetailed" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <table class="table table-bordered" id="detailed">
-                            <thead>
-                            <tr class="danger">
-                                <td>شرح گروه</td>
-                                <td>کد گروه</td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>بانکها</td>
-                                <td>10
-                                    <input value="10" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>صندوق</td>
-                                <td>20
-                                    <input value="20" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>اشخاص حقیقی</td>
-                                <td>30
-                                    <input value="30" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>اشخاص حقوقی</td>
-                                <td>40
-                                    <input value="40" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>هزینه ها</td>
-                                <td>60
-                                    <input value="60" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>داراییهای ثابت</td>
-                                <td>70
-                                    <input value="70" type="checkbox" class="flat"/>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="form-group">
-                            <div>
-                                <button type="submit" id="save_value" class="btn btn-success" data-dismiss="modal">ثبت</button>
-                                <button type="submit" class="btn btn-primary" data-dismiss="modal">انصراف</button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>طبقه بندی حسابهای تفضیلی
+                                    </h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div class="row hidden-print">
+                                        <a href="#" class="btn btn-success" style="margin-right: 10px" data-toggle="modal" id="m" data-target="#mymodal"><i class="fa fa-plus"></i>  ایجاد حساب تفضیلی </a>
+                                        <button id="SelectDetailedOne" class="btn btn-primary" data-dismiss="modal">انتخاب</button>
+                                        <button type="submit" class="btn btn-primary" data-dismiss="modal">انصراف</button>
+                                    </div>
+                                    </div>
+                                    <br>
+                                    <h4>گروه حساب ها</h4>
+                                    <br>
+                                    <ul id="tree2">
+                                        @foreach($Detailed as $category)
+                                            <li class="list-group-item" id="{{ $category->Id }}">
+                                                {{ $category->Code }} - {{ $category->Name }}
+                                                <span class="badge pull-left"> {{ count($category->childs) }} </span>
+                                                @if(count($category->childs))
+                                                    @include('financial.detailed.manageChild',['childs' => $category->childs])
+                                                @endif
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 @endsection
 @section('script')
     <script src="{{ url('/') }}/js/treeview.js"></script>
@@ -988,6 +906,12 @@
             })
         });
         $(function(){
+            let Code = '';
+            let CodeDetailOne = '';
+            let selectName = '';
+            $('.click').click(function () {
+                selectName = this.name;
+            })
             $('#save_value').click(function(){
                 var final = '';
                 $(':checkbox:checked').each(function(){
@@ -995,7 +919,34 @@
                     final += values + ', ';
                 });
             });
+            $("#tree1 li").on('click', function(e) {
+                Code = $("#"+this.id).attr("Code")
+                e.stopPropagation();
+                $("#SelectCode").click(function () {
+                    if(Code === undefined){
+                        alert("مقدار انتخابی معین نیست");
+                    }
+                    $("#Create #Code").val( Code );
+                })
+            });
+            $("#tree2 li").on('click', function(e) {
+                CodeDetailOne = this.title;
+                e.stopPropagation();
+                $("#SelectDetailedOne").click(function () {
+                    if(CodeDetailOne === undefined || CodeDetailOne === ''){
+                        alert("مقدار انتخابی تفضیلی نیست");
+                    }
+                    if(selectName === 'DetailedOne') {
+                        $("#Create #DetailedOne").val(CodeDetailOne);
+                    }else if(selectName === 'DetailedTwo') {
+                        $("#Create #DetailedTwo").val(CodeDetailOne);
+                    }else if(selectName === 'DetailedTree') {
+                        $("#Create #DetailedTree").val(CodeDetailOne);
+                    }
+                })
+            });
         });
+
     </script>
 @endsection
 @section('style')

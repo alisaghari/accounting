@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Model\Financial\Group;
+use App\Model\Financial\Detailed;
 
 class DocumentsController extends Controller
 {
@@ -24,7 +25,9 @@ class DocumentsController extends Controller
     {
         $Group = Group::where('ParentId', '=', 0)->get();
         $AllGroup = Group::pluck('Name', 'Id')->all();
-        return view('financial.document.documents', compact('Group', 'AllGroup'));
+        $Detailed = Detailed::where('ParentId', '=', 0)->get();
+        $AllDetailed = Detailed::pluck('Name', 'Id')->all();
+        return view('financial.document.documents', compact('Group', 'AllGroup', 'Detailed', 'AllDetailed'));
     }
     /**
      * Show the form for creating a new resource.
